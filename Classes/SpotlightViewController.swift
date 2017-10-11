@@ -27,8 +27,9 @@ open class SpotlightViewController: UIViewController {
     open let spotlightView = SpotlightView()
     open let contentView = UIView()
     
-    open var alpha: CGFloat = 0.5
-
+    open var alpha: CGFloat = 0.7
+    
+    fileprivate var overlayColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         commonInit()
@@ -42,6 +43,10 @@ open class SpotlightViewController: UIViewController {
     fileprivate func commonInit() {
         modalPresentationStyle = .overCurrentContext
         transitioningDelegate = self
+    }
+    
+    open func setOverlayColor(_ color: UIColor) {
+        overlayColor = color.withAlphaComponent(alpha)
     }
     
     open override func viewDidLoad() {
@@ -60,7 +65,7 @@ open class SpotlightViewController: UIViewController {
     
     fileprivate func setupSpotlightView(_ alpha: CGFloat) {
         spotlightView.frame = view.bounds
-        spotlightView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+        spotlightView.backgroundColor = overlayColor
         spotlightView.isUserInteractionEnabled = false
         view.insertSubview(spotlightView, at: 0)
         view.addConstraints([NSLayoutAttribute.top, .bottom, .left, .right].map {
@@ -70,7 +75,6 @@ open class SpotlightViewController: UIViewController {
     
     fileprivate func setupContentView() {
         contentView.frame = view.bounds
-        contentView.backgroundColor = UIColor.clear
         view.addSubview(contentView)
         view.addConstraints([NSLayoutAttribute.top, .bottom, .left, .right].map {
             NSLayoutConstraint(item: view, attribute: $0, relatedBy: .equal, toItem: contentView, attribute: $0, multiplier: 1, constant: 0)
@@ -80,6 +84,10 @@ open class SpotlightViewController: UIViewController {
     fileprivate func setupTapGesture() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(SpotlightViewController.viewTapped(_:)));
         view.addGestureRecognizer(gesture)
+    }
+    
+    open func currentSpotlightCenter() -> CGPoint {
+        return spotlightView.currentSpotlightCenter();
     }
 }
 
