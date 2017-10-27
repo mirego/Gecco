@@ -86,7 +86,7 @@ open class SpotlightView: UIView {
             
             titleLabel.frame = CGRect(x: messageViewPadding , y: messageViewPadding, width: titleLabel.bounds.size.width, height: titleLabel.bounds.size.height)
             messageLabel.frame = CGRect(x: messageViewPadding , y: messageViewPadding + titleLabel.bounds.size.height + messageTitleMargin , width: messageLabel.bounds.size.width, height: messageLabel.bounds.size.height)
-            closeView.frame = CGRect(x: bounds.size.width - closeView.bounds.size.width - 10 , y: 10 , width: closeView.bounds.size.width , height: closeView.bounds.size.height)
+            closeView.frame = CGRect(x: messageView.bounds.size.width - closeView.bounds.size.width - 10 , y: 10 , width: closeView.bounds.size.width , height: closeView.bounds.size.height)
         }
     }
     
