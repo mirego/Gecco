@@ -9,19 +9,19 @@
 import UIKit
 
 open class SpotlightView: UIView {
-    open static let defaultAnimateDuration: TimeInterval = 0.25
+    @objc open static let defaultAnimateDuration: TimeInterval = 0.25
     fileprivate let spotlightPadding: CGFloat = 20
     fileprivate let messageViewMargin: CGFloat = 20
     fileprivate let messageViewPadding: CGFloat = 20
     fileprivate let messageTitleMargin: CGFloat = 10
     fileprivate let messageViewTextMaxWidthMargin: CGFloat = 250
     
-    public let messageLabel: UILabel = UILabel()
-    public let titleLabel: UILabel = UILabel()
-    public let messageView: UIView = UIView()
-    public let closeView: UIImageView = UIImageView()
+    @objc public let messageLabel: UILabel = UILabel()
+    @objc public let titleLabel: UILabel = UILabel()
+    @objc public let messageView: UIView = UIView()
+    @objc public let closeView: UIImageView = UIImageView()
     
-    open var currentTargetCenter : CGPoint = CGPoint.zero
+    @objc open var currentTargetCenter : CGPoint = CGPoint.zero
     fileprivate lazy var maskLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         layer.fillRule = kCAFillRuleEvenOdd
@@ -41,7 +41,7 @@ open class SpotlightView: UIView {
         commonInit()
     }
     
-    open func currentSpotlightCenter() -> CGPoint {
+    @objc open func currentSpotlightCenter() -> CGPoint {
         return currentTargetCenter
     }
     
@@ -115,21 +115,21 @@ open class SpotlightView: UIView {
         }) 
     }
     
-    open func disappear(_ duration: TimeInterval = SpotlightView.defaultAnimateDuration) {
+    @objc open func disappear(_ duration: TimeInterval = SpotlightView.defaultAnimateDuration) {
         maskLayer.add(disappearAnimation(duration), forKey: nil)
     }
     
-    open func appearOnViewCircle(_ target: UIView, message: String, title: String) {
+    @objc open func appearOnViewCircle(_ target: UIView, message: String, title: String) {
         currentTargetCenter = target.center;
         appear(Spotlight.Oval(center: target.superview!.convert(target.center, to: self.superview), diameter: target.frame.size.width + spotlightPadding, message: message, title:title));
     }
     
-    open func appearOnViewRectangle(_ target: UIView, message: String, title: String) {
+    @objc open func appearOnViewRectangle(_ target: UIView, message: String, title: String) {
         currentTargetCenter = target.center;
         appear(Spotlight.RoundedRect(center: target.superview!.convert(target.center, to: self.superview), size: CGSize(width:target.frame.size.width - spotlightPadding,  height:target.frame.size.height - spotlightPadding), cornerRadius:target.frame.size.height/2, message: message, title:title));
     }
     
-    open func appearFloating(message: String, title: String) {
+    @objc open func appearFloating(message: String, title: String) {
         appear(Spotlight.NoShape(message: message, title:title));
     }
     
@@ -144,7 +144,7 @@ open class SpotlightView: UIView {
         }
     }
     
-    open func moveToView(_ target: UIView, message: String, title: String) {
+    @objc open func moveToView(_ target: UIView, message: String, title: String) {
         move(Spotlight.Oval(center: target.superview!.convert(target.center, to: self.superview), diameter: target.frame.size.width + spotlightPadding, message: message, title:title));
     }
 }

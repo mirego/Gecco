@@ -16,7 +16,7 @@ import UIKit
 
 open class SpotlightViewController: UIViewController {
     
-    open weak var delegate: SpotlightViewControllerDelegate?
+    @objc open weak var delegate: SpotlightViewControllerDelegate?
     
     fileprivate lazy var transitionController: SpotlightTransitionController = {
         let controller = SpotlightTransitionController()
@@ -24,10 +24,10 @@ open class SpotlightViewController: UIViewController {
         return controller
     }()
     
-    open let spotlightView = SpotlightView()
-    open let contentView = UIView()
+    @objc open let spotlightView = SpotlightView()
+    @objc open let contentView = UIView()
     
-    open var alpha: CGFloat = 0.7
+    @objc open var alpha: CGFloat = 0.7
     
     fileprivate var overlayColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -45,7 +45,7 @@ open class SpotlightViewController: UIViewController {
         transitioningDelegate = self
     }
     
-    open func setOverlayColor(_ color: UIColor) {
+    @objc open func setOverlayColor(_ color: UIColor) {
         overlayColor = color.withAlphaComponent(alpha)
     }
     
@@ -86,7 +86,7 @@ open class SpotlightViewController: UIViewController {
         view.addGestureRecognizer(gesture)
     }
     
-    open func currentSpotlightCenter() -> CGPoint {
+    @objc open func currentSpotlightCenter() -> CGPoint {
         return spotlightView.currentSpotlightCenter();
     }
 }
@@ -101,11 +101,11 @@ extension SpotlightViewController {
 }
 
 extension SpotlightViewController: SpotlightTransitionControllerDelegate {
-    func spotlightTransitionWillPresent(_ controller: SpotlightTransitionController, transitionContext: UIViewControllerContextTransitioning) {
+    @objc func spotlightTransitionWillPresent(_ controller: SpotlightTransitionController, transitionContext: UIViewControllerContextTransitioning) {
         delegate?.spotlightViewControllerWillPresent?(self, animated: transitionContext.isAnimated)
     }
     
-    func spotlightTransitionWillDismiss(_ controller: SpotlightTransitionController, transitionContext: UIViewControllerContextTransitioning) {
+    @objc func spotlightTransitionWillDismiss(_ controller: SpotlightTransitionController, transitionContext: UIViewControllerContextTransitioning) {
         delegate?.spotlightViewControllerWillDismiss?(self, animated: transitionContext.isAnimated)
     }
 }
