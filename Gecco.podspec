@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Gecco'
-  s.version = '1.0.0'
+  s.version = '1.0.0.3'
   s.license = 'MIT'
   s.homepage = 'https://github.com/yukiasai/'
   s.summary = 'Simply highlight items for your tutorial walkthrough, written in Swift'
@@ -11,4 +11,3 @@ Pod::Spec.new do |s|
   
   s.source_files = 'Classes/*.swift'
 end
-
