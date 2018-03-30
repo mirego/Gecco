@@ -82,7 +82,7 @@ open class SpotlightViewController: UIViewController {
     }
     
     fileprivate func setupTapGesture() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(SpotlightViewController.viewTapped(_:)));
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)));
         view.addGestureRecognizer(gesture)
     }
     
@@ -92,6 +92,7 @@ open class SpotlightViewController: UIViewController {
 }
 
 extension SpotlightViewController {
+    @objc
     func viewTapped(_ gesture: UITapGestureRecognizer) {
         let touchPoint = gesture.location(in: spotlightView)
         let isInside = spotlightView.spotlight?.frame.contains(touchPoint) ?? false
