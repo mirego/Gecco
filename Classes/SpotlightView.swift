@@ -9,7 +9,8 @@
 import UIKit
 
 open class SpotlightView: UIView {
-    @objc open static let defaultAnimateDuration: TimeInterval = 0.25
+    @objc public static let defaultAnimateDuration: TimeInterval = 0.25
+    
     fileprivate let spotlightPadding: CGFloat = 20
     fileprivate let messageViewMargin: CGFloat = 20
     fileprivate let messageViewPadding: CGFloat = 20

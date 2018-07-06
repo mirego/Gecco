@@ -24,8 +24,8 @@ open class SpotlightViewController: UIViewController {
         return controller
     }()
     
-    @objc open let spotlightView = SpotlightView()
-    @objc open let contentView = UIView()
+    @objc public let spotlightView = SpotlightView()
+    @objc public let contentView = UIView()
     
     @objc open var alpha: CGFloat = 0.7
     
