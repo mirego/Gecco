@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		467D20681C48883C0033D5CA /* Gecco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467D205D1C48883C0033D5CA /* Gecco.framework */; };
-		46C6AE2D1C4DF9A8004AAE2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AE231C4DF9A8004AAE2F /* Info.plist */; };
 		46C6AE2F1C4DF9AF004AAE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AE1A1C4DF9A8004AAE2F /* AppDelegate.swift */; };
 		46C6AE301C4DF9BB004AAE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AE1B1C4DF9A8004AAE2F /* Assets.xcassets */; };
 		46C6AE311C4DF9EA004AAE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AE1E1C4DF9A8004AAE2F /* Main.storyboard */; };
@@ -41,16 +40,16 @@
 		467D20BB1C4DBF810033D5CA /* SpotlightTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpotlightTransitionController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		46A637201C49CEB00000AF22 /* SpotlightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpotlightView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		46A637231C4B07EB0000AF22 /* Spotlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Spotlight.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		46C6AE181C4DF9A8004AAE2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C6AE1A1C4DF9A8004AAE2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46C6AE1B1C4DF9A8004AAE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46C6AE1D1C4DF9A8004AAE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46C6AE1F1C4DF9A8004AAE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		46C6AE201C4DF9A8004AAE2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C6AE211C4DF9A8004AAE2F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		46C6AE231C4DF9A8004AAE2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C6AE241C4DF9A8004AAE2F /* GeccoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeccoTests.swift; sourceTree = "<group>"; };
 		46C6AE411C4E0A5E004AAE2F /* AnnotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationViewController.swift; sourceTree = "<group>"; };
+		A6ED6BB321F938C700DD2EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6ED6BB421F938CF00DD2EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6ED6BB521F938D500DD2EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +114,7 @@
 		46C6AE161C4DF9A8004AAE2F /* Gecco */ = {
 			isa = PBXGroup;
 			children = (
-				46C6AE181C4DF9A8004AAE2F /* Info.plist */,
+				A6ED6BB321F938C700DD2EA7 /* Info.plist */,
 			);
 			path = Gecco;
 			sourceTree = "<group>";
@@ -123,11 +122,11 @@
 		46C6AE191C4DF9A8004AAE2F /* GeccoExample */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED6BB421F938CF00DD2EA7 /* Info.plist */,
 				46C6AE1A1C4DF9A8004AAE2F /* AppDelegate.swift */,
 				46C6AE1B1C4DF9A8004AAE2F /* Assets.xcassets */,
 				46C6AE1C1C4DF9A8004AAE2F /* LaunchScreen.storyboard */,
 				46C6AE1E1C4DF9A8004AAE2F /* Main.storyboard */,
-				46C6AE201C4DF9A8004AAE2F /* Info.plist */,
 				46C6AE211C4DF9A8004AAE2F /* ViewController.swift */,
 				46C6AE411C4E0A5E004AAE2F /* AnnotationViewController.swift */,
 			);
@@ -137,7 +136,7 @@
 		46C6AE221C4DF9A8004AAE2F /* GeccoTests */ = {
 			isa = PBXGroup;
 			children = (
-				46C6AE231C4DF9A8004AAE2F /* Info.plist */,
+				A6ED6BB521F938D500DD2EA7 /* Info.plist */,
 				46C6AE241C4DF9A8004AAE2F /* GeccoTests.swift */,
 			);
 			path = GeccoTests;
@@ -221,11 +220,11 @@
 				TargetAttributes = {
 					467D205C1C48883C0033D5CA = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1010;
 					};
 					467D20661C48883C0033D5CA = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1010;
 					};
 					467D20801C488C920033D5CA = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -258,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C6AE2D1C4DF9A8004AAE2F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +391,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -445,7 +443,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -470,7 +468,6 @@
 				PRODUCT_NAME = Gecco;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -490,7 +487,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yukiasai.Gecco;
 				PRODUCT_NAME = Gecco;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -501,7 +497,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yukiasai.GeccoTests;
 				PRODUCT_NAME = Gecco;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -512,7 +507,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yukiasai.GeccoTests;
 				PRODUCT_NAME = Gecco;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -524,7 +518,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yukiasai.GeccoExample;
 				PRODUCT_NAME = GeccoExample;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -536,7 +529,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yukiasai.GeccoExample;
 				PRODUCT_NAME = GeccoExample;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
