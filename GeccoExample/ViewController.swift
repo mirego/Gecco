@@ -9,24 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    
+
     @IBAction func buttonPressed(_ sender: AnyObject) {
         presentAnnotation()
     }
-    
+
     func presentAnnotation() {
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Annotation") as! AnnotationViewController
+        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Annotation") as? AnnotationViewController else { return }
         viewController.alpha = 0.5
         present(viewController, animated: true, completion: nil)
     }
 }
-
-
